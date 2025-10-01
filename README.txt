@@ -1,19 +1,21 @@
-# Roopa Adepu – Portfolio Site
+# Roopa Adepu – Simple Portfolio Website
 
-This folder contains a minimal, professional portfolio website built with plain HTML/CSS/JS.
+This is a minimal, multi-page HTML/CSS portfolio for Roopa Adepu.
+
+## Structure
+- index.html (Home with buttons)
+- projects.html (CAD + CFD projects)
+- research.html (Research & Experience)
+- contact.html (Contact info)
+- assets/ (resume + images)
+- styles.css (shared styling)
 
 ## How to use
-1. Open `index.html` to preview locally.
-2. Replace images in `assets/images/` or add new ones; update titles in HTML if desired.
-3. Replace contact links and update resume at `assets/Roopa_Adepu_Resume.pdf` if needed.
+- Replace images in assets/images with your own renders and update file paths if needed.
+- Replace the resume file at assets/Roopa_Adepu_Resume.pdf with your updated resume.
 
-## Deploy to GitHub Pages (free)
-- Create a new repo, e.g., `roopa-portfolio`.
-- Upload the contents of this folder to the **root** of the repo.
-- In GitHub: Settings → Pages → Source: **Deploy from a branch**, Branch: `main`, Folder: `/root` → Save.
-- Your site will be live at: `https://<your-username>.github.io/roopa-portfolio/`.
-- Update the link on your resume.
-
-## Optional custom domain
-- Buy `roopaadepu.com` or similar and point it to GitHub Pages via DNS (A + CNAME records).
-
+## Deploy to GitHub Pages
+1. Create a new GitHub repository (e.g., `roopa-portfolio`).
+2. Upload all these files to the repo root.
+3. Go to Settings → Pages → Deploy from a branch → select `main` branch and `/root` folder.
+4. Your site will be live at https://<username>.github.io/roopa-portfolio/
