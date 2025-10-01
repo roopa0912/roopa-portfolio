@@ -6,19 +6,35 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Projects</h1>
-  <p class="tagline">CAD Portfolio & CFD Work</p>
-  <div class="container">
-    <h2>CAD Portfolio</h2>
-    <div class="gallery">
-      <img src="assets/images/assembly_u_joint.jpg" alt="Universal Joint">
-      <img src="assets/images/assembly_puller.jpg" alt="Gear Puller">
-      <img src="assets/images/part_spur_gear.jpg" alt="Spur Gear">
-      <img src="assets/images/prod_kettlebell.jpg" alt="Kettlebell">
+  
+<header>
+  <h2>Roopa Adepu</h2>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="research.html">Research</a>
+    <a href="contact.html">Contact</a>
+    <a href="assets/Roopa_Adepu_Resume.pdf" target="_blank">Resume</a>
+  </nav>
+</header>
+
+  <section class="container">
+    <h1>Projects</h1>
+    <div class="grid">
+      <a href="parts.html" class="card">
+        <h2>Parts</h2>
+        <p>Individual mechanical parts like Spur Gear, Bracket, Heat Sink.</p>
+      </a>
+      <a href="assemblies.html" class="card">
+        <h2>Assemblies</h2>
+        <p>Complex CAD assemblies like Linkage Mechanism, Universal Joint.</p>
+      </a>
+      <a href="objects.html" class="card">
+        <h2>Daily Life Objects</h2>
+        <p>Models inspired by daily life — kettlebell, chess rook, baking tray.</p>
+      </a>
     </div>
-    <h2>CFD Project</h2>
-    <p>Performed CFD simulations on DrivAer models using OpenFOAM, analyzing drag reduction strategies and designing vortex generators. Improved fuel efficiency by 8% in platoon formation.</p>
-    <p><a href="index.html" class="btn">Back to Home</a></p>
-  </div>
+  </section>
+  <footer>© <script>document.write(new Date().getFullYear())</script> Roopa Adepu</footer>
 </body>
 </html>
