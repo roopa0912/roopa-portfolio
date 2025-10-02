@@ -21,79 +21,126 @@
 <!-- Section 1: NEU -->
 <section class="research-section dark">
   <div class="container">
-    <h1>Physics-Informed Machine Learning for Constitutive Modeling</h1>
-    <h3>Northeastern University — Prof. Juner Zhu’s Group</h3>
+    <h2>Northeastern University - Prof. Juner Zhu's group</h2>
+    <p><em>Jun 2025 – Present</em></p>
     <p>
-      At Northeastern, my current research focuses on the development of 
-      <strong>interpretable constitutive models</strong> using physics-informed machine learning. 
-      The primary goal is to create models that not only predict mechanical responses 
-      but are also <strong>interpretable</strong> and provide physical insight. 
+      At Northeastern, my research focuses on designing <strong>interpretable machine learning frameworks</strong> 
+      for material characterization. I developed a physics-informed neural network (ICNN) with quadratic strain energy 
+      constraints — ensuring energy positivity, symmetry, and positive definiteness. This framework achieved 
+      <strong>98% R² accuracy</strong> on finite-element (FEM) strain–stress datasets.
     </p>
     <p>
-      Ongoing efforts explore <strong>trainability on time-varying experimental data</strong>, 
-      embedding physical constraints into architectures like PINNs and ICNNs, 
-      and balancing predictive accuracy with <strong>interpretability of constitutive laws</strong>. 
+      To improve interpretability, I integrated <strong>dimensionality reduction</strong> and symbolic regression (PySR), 
+      extracting closed-form stress–strain relationships and stiffness constants 
+      (C<sub>11</sub>, C<sub>12</sub>, C<sub>22</sub>, C<sub>66</sub>) consistent with classical elasticity. 
+      Current efforts extend toward <strong>plasticity modeling</strong>, leveraging RNN/LSTM architectures 
+      to capture path-dependent material responses.
     </p>
   </div>
 </section>
+
 
 <!-- Section 2: Collins Aerospace -->
 <section class="research-section light">
   <div class="container">
-    <h1>Reduced Order Models & Surrogate Optimization</h1>
-    <h3>Collins Aerospace — R&D Internship</h3>
+    <h2>Collins Aerospace (RTX) — Lead Engineer</h2>
+    <p><em>Applied Research & Technology | Feb 2022 – Dec 2024</em></p>
+
+    <h3>Multi-Physics Modeling</h3>
     <p>
-      At Collins Aerospace, my work spanned two key projects:
+      Led large-scale CFD simulations on high-performance computing clusters to generate 
+      training data for <strong>AI-based Reduced Order Models (ROMs)</strong>. This work reduced 
+      simulation runtime from <strong>6 hours to just 20 seconds</strong>, enabling real-time 
+      integration into system-level workflows.
     </p>
-    <ul class="bullets">
-      <li>
-        <strong>Reduced Order Models (ROMs):</strong> Developed multi-fidelity ROMs 
-        for aerospace components to reduce computational expense in CFD simulations.
-      </li>
-      <li>
-        <strong>Surrogate Modeling:</strong> Built machine learning-based surrogate 
-        models for rapid design exploration and optimization, enabling efficient 
-        trade-off analysis across operating conditions.
-      </li>
-    </ul>
     <p>
-      These projects highlighted the synergy between <strong>physics-based simulation</strong> 
-      and <strong>machine learning models</strong> for aerospace design acceleration.
+      Demonstrated a proof of concept on a solenoid valve, which secured 
+      <strong>$80K in funding</strong> to mature the project. The approach leveraged 
+      high-fidelity CFD models to train dynamic ROMs. Additionally, I applied workflows 
+      to Airbus A320 Oxygen Systems, developing algorithms with <strong>NeuralODEs</strong> 
+      and <strong>Physics-Informed Neural Networks (PINNs)</strong>, benchmarking them 
+      against digital twin tools for ROM generation.
+    </p>
+
+    <h3>Surrogate Modeling & Optimization</h3>
+    <p>
+      Developed surrogate models for Air Management Systems (MA700, Boeing 777X), 
+      achieving <strong>95% R² accuracy</strong> and reducing model compilation time by 60%. 
+      Applied advanced regression methods with automated hyperparameter tuning via 
+      <strong>Bayesian optimization</strong>.
+    </p>
+    <p>
+      Incorporated <strong>Uncertainty Quantification</strong> (KNN, MCMC) into ROM predictions, 
+      integrating Python algorithms into MATLAB with an interactive GUI. The matured 
+      solution is now <strong>deployed in production workflows</strong> at Collins, enabling 
+      faster and more reliable plant model development.
+    </p>
+    <p>
+      Recognized with <strong>2 trade secrets</strong> and <strong>two Star Awards</strong> 
+      for delivering innovative solutions and advancing surrogate modeling capabilities.
     </p>
   </div>
 </section>
+
 
 <!-- Section 3: IEEE Paper -->
-<section class="research-section dark">
-  <div class="container">
-    <h1>Reduced Order Modeling of a Heat Exchanger with a Stacking Ensemble</h1>
-    <h3>IEEE ISSE Conference — IIT Guwahati</h3>
-    <p>
-      This publication presented a <strong>stacking ensemble method</strong> for reduced 
-      order modeling of a heat exchanger, addressing computational inefficiencies 
-      in system simulations. The approach combined multiple surrogate learners to 
-      improve accuracy and generalizability over traditional ROMs.
-    </p>
-    <p>
-      Key contributions included:
-    </p>
-    <ul class="bullets">
-      <li>Demonstrated ensemble surrogates outperforming single-model ROMs.</li>
-      <li>Validated performance on experimental heat exchanger datasets.</li>
-      <li>Showed significant reduction in computational cost with high accuracy.</li>
-    </ul>
 
-    <!-- Placeholder for figures -->
+ <section class="research-section dark">
+  <div class="container">
+    <h2>Reduced Order Modeling of a Heat Exchanger with a Stacking Ensemble</h2>
+    <h3>IEEE International Symposium on Systems Engineering (ISSE), 2022</h3>
+
+    <p>
+      Published and presented at <strong>IEEE ISSE 2022</strong>, this work proposed a 
+      <strong>stacking ensemble framework</strong> for Reduced Order Modeling (ROM) 
+      of a cross-flow heat exchanger to address computational inefficiencies in simulation.
+    </p>
+
+    <p>
+      The model combined Artificial Neural Networks (ANNs) with a 
+      <strong>Genetic Programming meta-regressor</strong>, achieving 
+      <strong>R² &gt; 95%</strong> compared to ~85–90% for conventional ensemble models. 
+      The ROM captured key input–output relationships 
+      (inlet temperatures, pressures, and flow rates → outlet temperatures and pressures) 
+      while reducing Simulink simulation runtime from minutes to seconds.
+    </p>
+
+    <p>
+      A major advantage of this framework is its <strong>black-box deployability</strong>, 
+      allowing industrial collaborators to use reduced models without exposing 
+      proprietary system design details.
+    </p>
+
+    <!-- Figures -->
     <div class="research-grid">
-      <img src="assets/images/ieee_fig1.jpg" alt="IEEE Figure 1 placeholder">
-      <img src="assets/images/ieee_fig2.jpg" alt="IEEE Figure 2 placeholder">
+      <figure>
+        <img src="assets/images/heat_exchanger_diagram.png" alt="Heat exchanger schematic">
+        <figcaption>Cross-flow heat exchanger schematic</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/stacking_ensemble_diagram.png" alt="Stacking ensemble schematic">
+        <figcaption>Stacked ensemble learning framework</figcaption>
+      </figure>
     </div>
 
+    <div class="research-grid">
+      <figure>
+        <img src="assets/images/genetic_programming_flow.png" alt="Genetic programming workflow">
+        <figcaption>Genetic Programming meta-regressor workflow</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/results_r2_table.png" alt="R² comparison table">
+        <figcaption>Performance comparison (R² values across models)</figcaption>
+      </figure>
+    </div>
+
+    <!-- Download link -->
     <div style="text-align:center; margin-top:1.5em;">
-      <a href="assets/papers/IEEE_Paper.pdf" target="_blank" class="btn">Download Paper (PDF)</a>
+      <a href="assets/papers/IEEE_Paper.pdf" target="_blank" class="btn">Download Full Paper (PDF)</a>
     </div>
   </div>
 </section>
+
 
 <footer>
   © <script>document.write(new Date().getFullYear())</script> Roopa Adepu
