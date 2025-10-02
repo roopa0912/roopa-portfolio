@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Research & Experience | Roopa Adepu</title>
+  <title>Research | Roopa Adepu</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
+
 <header>
   <h2>Roopa Adepu</h2>
   <nav>
@@ -18,12 +18,86 @@
   </nav>
 </header>
 
-  <section class="container">
-    <h1>Research & Experience</h1>
-    <h2>Northeastern University</h2>
-    <p>Developing interpretable ML frameworks (ICNN, RNN/LSTM) for stress–strain modeling.</p>
-    <h2>Collins Aerospace</h2>
-    <p>CFD simulations and surrogate modeling (NeuralODEs, PINNs) for aero systems.</p>
-  </section>
+<!-- Section 1: NEU -->
+<section class="research-section dark">
+  <div class="container">
+    <h1>Physics-Informed Machine Learning for Constitutive Modeling</h1>
+    <h3>Northeastern University — Prof. Juner Zhu’s Group</h3>
+    <p>
+      At Northeastern, my current research focuses on the development of 
+      <strong>interpretable constitutive models</strong> using physics-informed machine learning. 
+      The primary goal is to create models that not only predict mechanical responses 
+      but are also <strong>interpretable</strong> and provide physical insight. 
+    </p>
+    <p>
+      Ongoing efforts explore <strong>trainability on time-varying experimental data</strong>, 
+      embedding physical constraints into architectures like PINNs and ICNNs, 
+      and balancing predictive accuracy with <strong>interpretability of constitutive laws</strong>. 
+    </p>
+  </div>
+</section>
+
+<!-- Section 2: Collins Aerospace -->
+<section class="research-section light">
+  <div class="container">
+    <h1>Reduced Order Models & Surrogate Optimization</h1>
+    <h3>Collins Aerospace — R&D Internship</h3>
+    <p>
+      At Collins Aerospace, my work spanned two key projects:
+    </p>
+    <ul class="bullets">
+      <li>
+        <strong>Reduced Order Models (ROMs):</strong> Developed multi-fidelity ROMs 
+        for aerospace components to reduce computational expense in CFD simulations.
+      </li>
+      <li>
+        <strong>Surrogate Modeling:</strong> Built machine learning-based surrogate 
+        models for rapid design exploration and optimization, enabling efficient 
+        trade-off analysis across operating conditions.
+      </li>
+    </ul>
+    <p>
+      These projects highlighted the synergy between <strong>physics-based simulation</strong> 
+      and <strong>machine learning models</strong> for aerospace design acceleration.
+    </p>
+  </div>
+</section>
+
+<!-- Section 3: IEEE Paper -->
+<section class="research-section dark">
+  <div class="container">
+    <h1>Reduced Order Modeling of a Heat Exchanger with a Stacking Ensemble</h1>
+    <h3>IEEE ISSE Conference — IIT Guwahati</h3>
+    <p>
+      This publication presented a <strong>stacking ensemble method</strong> for reduced 
+      order modeling of a heat exchanger, addressing computational inefficiencies 
+      in system simulations. The approach combined multiple surrogate learners to 
+      improve accuracy and generalizability over traditional ROMs.
+    </p>
+    <p>
+      Key contributions included:
+    </p>
+    <ul class="bullets">
+      <li>Demonstrated ensemble surrogates outperforming single-model ROMs.</li>
+      <li>Validated performance on experimental heat exchanger datasets.</li>
+      <li>Showed significant reduction in computational cost with high accuracy.</li>
+    </ul>
+
+    <!-- Placeholder for figures -->
+    <div class="research-grid">
+      <img src="assets/images/ieee_fig1.jpg" alt="IEEE Figure 1 placeholder">
+      <img src="assets/images/ieee_fig2.jpg" alt="IEEE Figure 2 placeholder">
+    </div>
+
+    <div style="text-align:center; margin-top:1.5em;">
+      <a href="assets/papers/IEEE_Paper.pdf" target="_blank" class="btn">Download Paper (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <script>document.write(new Date().getFullYear())</script> Roopa Adepu
+</footer>
+
 </body>
 </html>
