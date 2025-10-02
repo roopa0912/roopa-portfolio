@@ -1,48 +1,59 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Projects | Roopa Adepu</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  
+
 <header>
   <h2>Roopa Adepu</h2>
   <nav>
     <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
+    <a href="projects.html" class="active">Projects</a>
     <a href="research.html">Research</a>
     <a href="contact.html">Contact</a>
     <a href="assets/Roopa_Adepu_Resume.pdf" target="_blank">Resume</a>
   </nav>
 </header>
 
-  <section class="container">
-    <h1>Projects</h1>
-    <div class="grid">
-      <a href="parts.html" class="card">
-        <h2>Parts</h2>
-        <p>Individual mechanical parts like Spur Gear, Bracket, Heat Sink.</p>
-      </a>
-      <a href="assemblies.html" class="card">
-        <h2>Assemblies</h2>
-        <p>Complex CAD assemblies like Linkage Mechanism, Universal Joint.</p>
-      </a>
-      <a href="daily-life.html" class="card">
-        <h2>Daily Life Objects</h2>
-        <p>Models inspired by daily life.</p>
-      </a>
-      <div class="part-item">
-    <a href="cfd-drivaer.html">
-     <img src="assets/images/drivaer_thumb.png" alt="CFD DrivAer Platoon">
-    <h3>CFD — DrivAer Platoon</h3>
-    <p>OpenFOAM RANS (k–ω) on Notchback DrivAer — drag reduction of 24–32% at close spacing, presented at IIT Guwahati.</p>
-  </a>
-</div>
+<section class="container">
+  <h1>Projects</h1>
 
+  <!-- SolidWorks Section with 3 tiles in a row -->
+  <div class="projects-grid">
+    <div class="project-card">
+      <h3>Parts</h3>
+      <p><a href="parts.html">Individual mechanical parts like Spur Gear, Bracket, Heat Sink.</a></p>
     </div>
-  </section>
-  <footer>© <script>document.write(new Date().getFullYear())</script> Roopa Adepu</footer>
+
+    <div class="project-card">
+      <h3>Assemblies</h3>
+      <p><a href="assemblies.html">Complex CAD assemblies like Linkage Mechanism, Universal Joint.</a></p>
+    </div>
+
+    <div class="project-card">
+      <h3>Daily Life Objects</h3>
+      <p><a href="daily-life.html">Models inspired by daily life.</a></p>
+    </div>
+  </div>
+
+  <!-- CFD Project as full width -->
+  <div class="project-card full-width">
+    <img src="assets/images/drivaer_teaser.jpg" alt="CFD DrivAer" style="max-width:500px; margin:auto; display:block;">
+    <h3><a href="cfd-drivaer.html">CFD — DrivAer Platoon</a></h3>
+    <p>
+      OpenFOAM RANS (k–ω) on Notchback DrivAer — drag reduction of 24–32% at close spacing, 
+      presented at IIT Guwahati.
+    </p>
+  </div>
+
+</section>
+
+<footer>
+  <p>© <script>document.write(new Date().getFullYear())</script> Roopa Adepu</p>
+</footer>
+
 </body>
 </html>
