@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>CFD — DrivAer Platoon | Roopa Adepu</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+<header>
+  <h2>Roopa Adepu</h2>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="research.html">Research</a>
+    <a href="contact.html">Contact</a>
+    <a href="assets/Roopa_Adepu_Resume.pdf" target="_blank">Resume</a>
+  </nav>
+</header>
+
+<section class="container">
+  <h1>CFD — Aerodynamics of DrivAer Models in a Platoon (OpenFOAM)</h1>
+
+  <p>
+    I simulated the <strong>Notchback DrivAer model</strong> (single car and two-car platoon) in 
+    <strong>OpenFOAM v8</strong> to study how spacing and speed affect drag and wake structures. 
+    The setup was viscous, incompressible, RANS with a two-equation k–ω model; I validated turbulence 
+    modeling on NASA’s backward-facing-step case and also validated the methodology on the Ahmed body 
+    before moving to DrivAer. For the platoon, I ran 30 m/s and 40 m/s across spacing ratios 
+    s = 0.25–1.5 (normalized by vehicle length).
+  </p>
+
+  <h2>Method & Validation</h2>
+  <ul class="bullets">
+    <li><strong>Solver:</strong> <code>simpleFoam</code> (steady, incompressible, turbulent) with SIMPLE; <code>potentialFoam</code> used to initialize the pressure field.</li>
+    <li><strong>Turbulence:</strong> k–ω / k–ω SST considered; k–ω showed best agreement on re-attachment length in the NASA backward-facing-step benchmark, so I used it for subsequent studies.</li>
+    <li><strong>Ahmed body check:</strong> slant 25°, Re≈2.76×10⁶ at 40 m/s. Present-study Cd ≈ <strong>0.311</strong>, consistent with literature.</li>
+    <li><strong>Single DrivAer (Notchback):</strong> present-study Cd ≈ <strong>0.408</strong>; clear stagnation at the nose and massive rear wake.</li>
+  </ul>
+
+  <h2>Platoon Setup (2 vehicles)</h2>
+  <ul class="bullets">
+    <li>Domain ~44 m × 8 m × 6.4 m; speeds <strong>30</strong> and <strong>40 m/s</strong>; spacing <strong>s = 0.25, 0.5, 0.75, 1.0, 1.5</strong> (normalized by car length).</li>
+    <li>Mesh: <code>snappyHexMesh</code> with refinement boxes; ~<strong>5.06 M nodes / 4.71 M cells</strong> at s=0.25; 30 layers for boundary layer resolution.</li>
+  </ul>
+
+  <h2>Key Findings</h2>
+  <ul class="bullets">
+    <li><strong>Drag vs spacing:</strong> At <strong>s=0.25 L</strong>, drag dropped by ~<strong>24%</strong> (30 m/s) and ~<strong>32%</strong> (40 m/s). Benefits diminish as spacing increases; rear-vehicle influence is significant up to about <strong>0.75 L (~3.42 m)</strong>.</li>
+    <li><strong>Trend:</strong> With increasing spacing, the leading-vehicle drag rises toward the single-car baseline, while the trailing car’s drag approaches its single-car value from below; overall normalized Cd increases with spacing.</li>
+    <li><strong>Speed effect:</strong> At <strong>40 m/s</strong>, both cars show better fuel-economy gains versus 30 m/s because stronger stagnation pressure on the lead car raises the pressure between cars, reducing pressure differential and thus drag on the lead vehicle.</li>
+  </ul>
+
+  <h2>Tools</h2>
+  <p>
+    OpenFOAM v8 (<code>simpleFoam</code>, <code>snappyHexMesh</code>), k–ω / k–ω SST turbulence modeling, 
+    Linux/HPC environment.
+  </p>
+
+  <h2>Talk / Recognition</h2>
+  <p>
+    Presented at <em>Research &amp; Industrial Conclave 2022, IIT Guwahati</em> — 
+    “A Numerical Investigation on the Aerodynamics of Notchback DrivAer Model in a Platoon.”
+  </p>
+
+  <h2>Suggested Images</h2>
+  <ul class="bullets">
+    <li>Velocity streamlines & pressure contours for s=0.25 and s=1.0 (contrast the wakes).</li>
+    <li>Drag vs spacing plots (Fig. 7.7) and % reduction plots (Fig. 7.8).</li>
+  </ul>
+
+  <div style="text-align:center; margin-top:2em;">
+    <a href="projects.html" class="btn">← Back to Projects</a>
+  </div>
+</section>
+
+<footer>
+  <p>© <script>document.write(new Date().getFullYear())</script> Roopa Adepu</p>
+</footer>
+
+</body>
+</html>
