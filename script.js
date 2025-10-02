@@ -22,3 +22,24 @@ if(toggle){
 }
 
 document.getElementById('y').textContent = new Date().getFullYear();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const lightboxLinks = document.querySelectorAll(".lightbox");
+  const overlay = document.createElement("div");
+  overlay.id = "lightbox-overlay";
+  const img = document.createElement("img");
+  overlay.appendChild(img);
+  document.body.appendChild(overlay);
+
+  lightboxLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      img.src = link.href;
+      overlay.classList.add("active");
+    });
+  });
+
+  overlay.addEventListener("click", () => {
+    overlay.classList.remove("active");
+  });
+});
