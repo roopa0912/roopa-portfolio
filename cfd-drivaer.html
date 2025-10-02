@@ -31,44 +31,59 @@
     s = 0.25–1.5 (normalized by vehicle length).
   </p>
 
+  <h2>Key Visuals</h2>
+  <div class="image-row">
+    <!-- Streamlines -->
+    <figure>
+      <img src="assets/images/drivaer_streamlines_s025.jpg" alt="Streamlines at s=0.25">
+      <figcaption>Velocity Streamlines — Platoon spacing s = 0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/images/drivaer_streamlines_s10.jpg" alt="Streamlines at s=1.0">
+      <figcaption>Velocity Streamlines — Platoon spacing s = 1.0</figcaption>
+    </figure>
+
+    <!-- Pressure Contours -->
+    <figure>
+      <img src="assets/images/drivaer_pressure_s025.jpg" alt="Pressure contours at s=0.25">
+      <figcaption>Pressure Contours — Platoon spacing s = 0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/images/drivaer_pressure_s10.jpg" alt="Pressure contours at s=1.0">
+      <figcaption>Pressure Contours — Platoon spacing s = 1.0</figcaption>
+    </figure>
+
+    <!-- Plots -->
+    <figure>
+      <img src="assets/images/drivaer_drag_vs_spacing.jpg" alt="Drag coefficient vs spacing">
+      <figcaption>Drag Coefficient vs. Spacing (Fig. 7.7)</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/images/drivaer_percent_reduction.jpg" alt="% drag reduction vs spacing">
+      <figcaption>Percentage Drag Reduction vs. Spacing (Fig. 7.8)</figcaption>
+    </figure>
+  </div>
+
   <h2>Method & Validation</h2>
   <ul class="bullets">
     <li><strong>Solver:</strong> <code>simpleFoam</code> (steady, incompressible, turbulent) with SIMPLE; <code>potentialFoam</code> used to initialize the pressure field.</li>
     <li><strong>Turbulence:</strong> k–ω / k–ω SST considered; k–ω showed best agreement on re-attachment length in the NASA backward-facing-step benchmark, so I used it for subsequent studies.</li>
     <li><strong>Ahmed body check:</strong> slant 25°, Re≈2.76×10⁶ at 40 m/s. Present-study Cd ≈ <strong>0.311</strong>, consistent with literature.</li>
-    <li><strong>Single DrivAer (Notchback):</strong> present-study Cd ≈ <strong>0.408</strong>; clear stagnation at the nose and massive rear wake.</li>
+    <li><strong>Single DrivAer (Notchback):</strong> present-study Cd ≈ <strong>0.408</strong>.</li>
   </ul>
 
-  <h2>Platoon Setup (2 vehicles)</h2>
+  <h2>Platoon Findings</h2>
   <ul class="bullets">
-    <li>Domain ~44 m × 8 m × 6.4 m; speeds <strong>30</strong> and <strong>40 m/s</strong>; spacing <strong>s = 0.25, 0.5, 0.75, 1.0, 1.5</strong> (normalized by car length).</li>
-    <li>Mesh: <code>snappyHexMesh</code> with refinement boxes; ~<strong>5.06 M nodes / 4.71 M cells</strong> at s=0.25; 30 layers for boundary layer resolution.</li>
+    <li>At <strong>s = 0.25 L</strong>, drag dropped by ~<strong>24%</strong> (30 m/s) and ~<strong>32%</strong> (40 m/s).</li>
+    <li>Rear-vehicle influence significant up to <strong>0.75 L (~3.42 m)</strong>.</li>
+    <li>At <strong>40 m/s</strong>, both cars show greater drag reduction due to stronger pressure recovery between vehicles.</li>
   </ul>
-
-  <h2>Key Findings</h2>
-  <ul class="bullets">
-    <li><strong>Drag vs spacing:</strong> At <strong>s=0.25 L</strong>, drag dropped by ~<strong>24%</strong> (30 m/s) and ~<strong>32%</strong> (40 m/s). Benefits diminish as spacing increases; rear-vehicle influence is significant up to about <strong>0.75 L (~3.42 m)</strong>.</li>
-    <li><strong>Trend:</strong> With increasing spacing, the leading-vehicle drag rises toward the single-car baseline, while the trailing car’s drag approaches its single-car value from below; overall normalized Cd increases with spacing.</li>
-    <li><strong>Speed effect:</strong> At <strong>40 m/s</strong>, both cars show better fuel-economy gains versus 30 m/s because stronger stagnation pressure on the lead car raises the pressure between cars, reducing pressure differential and thus drag on the lead vehicle.</li>
-  </ul>
-
-  <h2>Tools</h2>
-  <p>
-    OpenFOAM v8 (<code>simpleFoam</code>, <code>snappyHexMesh</code>), k–ω / k–ω SST turbulence modeling, 
-    Linux/HPC environment.
-  </p>
 
   <h2>Talk / Recognition</h2>
   <p>
     Presented at <em>Research &amp; Industrial Conclave 2022, IIT Guwahati</em> — 
     “A Numerical Investigation on the Aerodynamics of Notchback DrivAer Model in a Platoon.”
   </p>
-
-  <h2>Suggested Images</h2>
-  <ul class="bullets">
-    <li>Velocity streamlines & pressure contours for s=0.25 and s=1.0 (contrast the wakes).</li>
-    <li>Drag vs spacing plots (Fig. 7.7) and % reduction plots (Fig. 7.8).</li>
-  </ul>
 
   <div style="text-align:center; margin-top:2em;">
     <a href="projects.html" class="btn">← Back to Projects</a>
