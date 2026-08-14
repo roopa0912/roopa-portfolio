@@ -7,7 +7,7 @@ function Hero() {
       <FlowField />
 
       <div className="hero-photo">
-        <img src="/me.jpeg" alt="Roopa Adepu" />
+        <img src={`${import.meta.env.BASE_URL}me.jpeg`} alt="Roopa Adepu" />
       </div>
 
       <div className="hero-text">
