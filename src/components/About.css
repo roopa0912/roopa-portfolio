@@ -1,0 +1,77 @@
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  background-color: var(--ink);
+  position: relative;
+  z-index: 2;
+}
+
+.about-label {
+  font-family: var(--font-mono);
+  color: var(--blueprint);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.about-grid.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-dim);
+  margin-bottom: 1.5rem;
+}
+
+.hl {
+  color: var(--blueprint);
+  font-weight: 600;
+}
+
+.stack-heading {
+  font-family: var(--font-mono);
+  color: var(--text);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.stack-heading:first-child {
+  margin-top: 0;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  border-color: var(--blueprint);
+  color: var(--blueprint);
+}

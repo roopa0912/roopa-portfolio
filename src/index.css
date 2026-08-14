@@ -1,0 +1,30 @@
+:root {
+--ink: #0d1a26;
+  --ink-panel: #14232f;
+  --text: #e6edf3;
+  --text-dim: #8b9bb0;
+  --blueprint: #5eead4;
+  --cyan: #5eead4;
+  --line: #1e3243;
+
+  --font-head: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--ink);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
