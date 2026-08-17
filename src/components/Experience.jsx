@@ -37,7 +37,7 @@ function Experience() {
 
   return (
     <section className="experience" ref={ref}>
-      <p className="exp-label">03 / experience</p>
+      <p className="exp-label">04 / experience</p>
 
       <div className={`exp-grid ${visible ? 'revealed' : ''}`}>
         <div className="exp-tabs">

@@ -12,11 +12,14 @@
 }
 
 .nav-brand {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
   font-family: var(--font-head);
   font-weight: 600;
   font-size: 1.1rem;
   color: var(--text);
-  text-decoration: none;
 }
 
 .nav-links {
@@ -24,15 +27,18 @@
   gap: 2rem;
 }
 
-.nav-links a {
+.nav-links button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
   font-family: var(--font-mono);
   font-size: 0.9rem;
   color: var(--text-dim);
-  text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
+.nav-links button:hover {
   color: var(--blueprint);
 }
 

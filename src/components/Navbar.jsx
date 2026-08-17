@@ -1,22 +1,46 @@
 import './Navbar.css';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function Navbar() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const goToSection = (id) => {
+    if (location.pathname === '/') {
+      // Already on home: just scroll
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // On a detail page: go home first, then scroll
+      navigate('/');
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  };
+
+  const goHome = () => {
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+    }
+  };
+
   return (
     <nav className="navbar">
-      <a
-        href="#top"
-        className="nav-brand"
-        onClick={() => window.location.reload()}
-      >
+      <button className="nav-brand" onClick={goHome}>
         Roopa Adepu
-      </a>
+      </button>
 
       <div className="nav-links">
-        <a href="#top">Home</a>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#gallery">Gallery</a>
+        <button onClick={goHome}>Home</button>
+        <button onClick={() => goToSection('about')}>About</button>
+        <button onClick={() => goToSection('education')}>Education</button>
+        <button onClick={() => goToSection('experience')}>Experience</button>
+        <button onClick={() => goToSection('projects')}>Projects</button>
+        <button onClick={() => goToSection('gallery')}>Gallery</button>
       </div>
 
       <div className="nav-icons">
