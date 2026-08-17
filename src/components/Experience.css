@@ -114,3 +114,14 @@
     transform: translateY(0);
   }
 }
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 4rem 1.5rem;
+  }
+
+  .exp-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

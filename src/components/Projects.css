@@ -98,3 +98,14 @@
   font-size: 0.9rem;
   color: var(--blueprint);
 }
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 4rem 1.5rem;
+  }
+
+  .proj-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

@@ -1,10 +1,20 @@
 import './Hero.css';
 import FlowField from './FlowField';
+import { useState, useEffect } from 'react';
 
 function Hero() {
-  return (
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsDesktop(window.innerWidth > 768);
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+    return (
     <section className="hero">
-      <FlowField />
+      {isDesktop && <FlowField />}
 
       <div className="hero-photo">
         <img src={`${import.meta.env.BASE_URL}me.jpeg`} alt="Roopa Adepu" />

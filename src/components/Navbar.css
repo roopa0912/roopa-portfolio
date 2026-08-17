@@ -6,8 +6,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.2rem 2.5rem;
-  background-color: rgba(13, 26, 38, 0.85);
+  background-color:rgba(13, 26, 38, 0.85);;
   backdrop-filter: blur(8px);
+  transform: translateZ(0);
   border-bottom: 1px solid var(--line);
 }
 
@@ -55,4 +56,52 @@
 
 .nav-icons a:hover {
   color: var(--blueprint);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+    color: var(--text-dim);
+    align-items: center;
+  }
+
+  .nav-toggle:hover {
+  color: var(--blueprint);
+}
+
+  .nav-icons {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    padding: 1.5rem;
+  }
 }

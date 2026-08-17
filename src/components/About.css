@@ -75,3 +75,14 @@
   border-color: var(--blueprint);
   color: var(--blueprint);
 }
+
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 1.5rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

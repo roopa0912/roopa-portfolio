@@ -1,11 +1,13 @@
 import './Navbar.css';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 
 function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
-
+  const [menuOpen, setMenuOpen] = useState(false);
   const goToSection = (id) => {
+    setMenuOpen(false); 
     if (location.pathname === '/') {
       // Already on home: just scroll
       const el = document.getElementById(id);
@@ -21,6 +23,7 @@ function Navbar() {
   };
 
   const goHome = () => {
+    setMenuOpen(false);
     if (location.pathname === '/') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
@@ -34,7 +37,7 @@ function Navbar() {
         Roopa Adepu
       </button>
 
-      <div className="nav-links">
+      <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <button onClick={goHome}>Home</button>
         <button onClick={() => goToSection('about')}>About</button>
         <button onClick={() => goToSection('education')}>Education</button>
@@ -56,6 +59,13 @@ function Navbar() {
           </svg>
         </a>
       </div>
+      <button
+        className="nav-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Menu"
+      >
+        {menuOpen ? '✕' : '☰'}
+      </button>
     </nav>
   );
 }

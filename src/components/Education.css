@@ -87,3 +87,9 @@
   color: var(--text);
   font-weight: 500;
 }
+
+@media (max-width: 768px) {
+  .education {
+    padding: 4rem 1.5rem;
+  }
+}
