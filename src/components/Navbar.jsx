@@ -43,7 +43,7 @@ function Navbar() {
         <button onClick={() => goToSection('education')}>Education</button>
         <button onClick={() => goToSection('experience')}>Experience</button>
         <button onClick={() => goToSection('projects')}>Projects</button>
-        <button onClick={() => goToSection('gallery')}>Gallery</button>
+       
       </div>
 
       <div className="nav-icons">

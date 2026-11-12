@@ -7,7 +7,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import ProjectDetail from './components/ProjectDetail';
 import ScrollToTop from './components/ScrollToTop';
-import Gallery from './components/Gallery';
+
 
 function Home() {
   return (
@@ -18,7 +18,6 @@ function Home() {
       <div id="education"><Education /></div>
       <div id="experience"><Experience /></div>
       <div id="projects"><Projects /></div>
-      <div id="gallery"><Gallery /></div>
     </>
   );
 }
